@@ -14,11 +14,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "Table.h"
 /*
  * 
  */
 int main(int argc, char** argv) {
-
+    HtmlFile *htmlFile = HtmlFile_new("/home/lminozzo/Documentos/Histórico_ILHA");
+    printf("%s", htmlFile->HTMLContent);
+    
+    _HtmlFile_destroy(htmlFile);
     return (EXIT_SUCCESS);
 }
 

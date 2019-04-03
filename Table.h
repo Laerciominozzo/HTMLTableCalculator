@@ -23,12 +23,13 @@ extern "C" {
     typedef struct {
         FILE *filePointer;
         char *HTMLContent;
-        unsigned long int HTMLFileSize;
+        long  HTMLFileSize;
     }HtmlFile;
     
     HtmlFile* HtmlFile_new(const char *fileName);
-    long HtmlFile_getFileSize(const HtmlFile *htmlFile);
-    void _HtmlFile_new(const char *fileName);
+    long HtmlFile_getFileSize(const HtmlFile *self);
+    void _HtmlFile_destroy(HtmlFile *self);
+    
 
 
 #ifdef __cplusplus
