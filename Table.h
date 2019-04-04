@@ -23,7 +23,7 @@ extern "C" {
     typedef struct {
         FILE *filePointer;
         char *HTMLContent;
-        long  HTMLFileSize;
+        long HTMLFileSize;
     }HtmlFile;
     
     HtmlFile* HtmlFile_new(const char *fileName);
