@@ -15,6 +15,7 @@
 #include <stdlib.h>
 
 #include "Table.h"
+#include "SearchTree.h"
 /*
  * 
  */

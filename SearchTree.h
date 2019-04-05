@@ -39,22 +39,46 @@ extern "C" {
     }SearchTree;
 
      const static Node NODES[] = [
-                {.Nodes = [&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODE+3],
+    /*0*/       {.Nodes = [&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODE+3],
                  .Symbols = ['1','2','3','4','5','6','7','8','9','0','<'],
                  .token = NONE},
              
-                {.Nodes = [&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+2],
+    /*1*/       {.Nodes = [&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+2],
                  .Symbols = ['1','2','3','4','5','6','7','8','9','0','.'],
                  .token = NUMBER},
                          
-                {.Nodes = [&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1],
+    /*2*/       {.Nodes = [&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1,&NODES+1],
                  .Symbols = ['1','2','3','4','5','6','7','8','9','0'],
                  .token = NONE},
                  
-                {.Nodes = [&NODES+4],
-                 .Symbols = ['t'],
-                 .token = NONE}
-     ];
+    /*3*/       {.Nodes = [&NODES+4,&NONE+7],
+                 .Symbols = ['t','l'],
+                 .token = NONE},
+                         
+    /*4*/       {.Nodes = [&NODES+5],
+                 .Symbols = ['l'],
+                 .token = NONE},
+                         
+    /*5*/       {.Nodes = [&NODES+6],
+                 .Symbols = ['>'],
+                 .token = NONE},
+                         
+    /*6*/       {.Nodes = [],
+                 .Symbols = [],
+                 .token = LINE},
+                         
+    /*7*/       {.Nodes = [&NODES+8],
+                 .Symbols = ['d'],
+                 .token = NONE},
+                         
+    /*8*/       {.Nodes = [&NODES+9],
+                 .Symbols = ['>'],
+                 .token = NONE},
+                         
+    /*9*/       {.Nodes = [],
+                 .Symbols = [],
+                 .token = COLUMN}                    
+    ];
 #ifdef __cplusplus
 }
 #endif
